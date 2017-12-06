@@ -45,6 +45,8 @@
     <Compile Include="Dec3.cs" />
     <Compile Include="Dec4.cs" />
     <Compile Include="Dec5.cs" />
+    <Compile Include="Dec6obj.cs" />
+    <Compile Include="General.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

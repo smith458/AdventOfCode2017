@@ -13,8 +13,9 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            string[] a = File.ReadLines("Input/Dec5.txt").ToArray();
-            Console.WriteLine(Dec5.CountArrayStrangeSteps(a));
+            string[] a = File.ReadLines("Input/Dec6.txt").ToArray();
+            Dec6obj today = new Dec6obj(a);
+            Console.WriteLine(today.CountReallocations());
         }
     }
 }
