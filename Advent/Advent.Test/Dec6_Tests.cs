@@ -39,6 +39,13 @@ namespace Advent.Test
             Assert.AreEqual(6681, a.CountReallocations());
         }
 
-        
+        [Test]
+        public void Test2A()
+        {
+            Dec6obj a = new Dec6obj(new int[] { 4, 1, 15, 12, 0, 9, 9, 5, 5, 8, 7, 3, 14, 5, 12, 3 });
+            Assert.AreEqual(2392, a.CountLoopLength());
+        }
+
+
     }
 }

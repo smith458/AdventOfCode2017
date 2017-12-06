@@ -9,7 +9,7 @@ namespace Advent
     public class Dec6obj
     {
         private int[] _banks;
-        HashSet<string> history = new HashSet<string>();
+        Dictionary<string, int> history = new Dictionary<string, int>();
 
         public Dec6obj(int[] banks)
         {
@@ -23,18 +23,52 @@ namespace Advent
 
         public int CountReallocations()
         {
-            bool unique = true;
             int count = 0;
-            Store();
+            string outStr;
+            history.Add(ArrToStr(), count);
 
-            while (unique)
+            while (true)
             {
                 ReallocateBlocks();
                 count++;
-                unique = Store();
+                outStr = ArrToStr();
+
+                if (!history.ContainsKey(outStr))
+                {
+                    history.Add(outStr, count);
+                }
+                else
+                {
+                    break;
+                }
             }
 
             return count;
+        }
+
+        public int CountLoopLength()
+        {
+            int count = 0;
+            string outStr;
+            history.Add(ArrToStr(), count);
+
+            while (true)
+            {
+                ReallocateBlocks();
+                count++;
+                outStr = ArrToStr();
+
+                if (!history.ContainsKey(outStr))
+                {
+                    history.Add(outStr, count);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            return count - history[outStr];
         }
 
         private void ReallocateBlocks()
@@ -54,7 +88,7 @@ namespace Advent
             }
         }
 
-        private bool Store()
+        private string ArrToStr()
         {
             string outStr = "";
 
@@ -64,7 +98,7 @@ namespace Advent
                 outStr += ", ";
             }
 
-            return history.Add(outStr);
+            return outStr;
         }
     }
 }

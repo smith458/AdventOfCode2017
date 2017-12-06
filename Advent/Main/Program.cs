@@ -15,7 +15,7 @@ namespace Main
         {
             string[] a = File.ReadLines("Input/Dec6.txt").ToArray();
             Dec6obj today = new Dec6obj(a);
-            Console.WriteLine(today.CountReallocations());
+            Console.WriteLine(today.CountLoopLength());
         }
     }
 }
