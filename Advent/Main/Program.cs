@@ -13,8 +13,8 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            string[] a = File.ReadLines("Input/Day4.txt").ToArray();
-            Console.WriteLine(Dec4.CountLegalPass(a));
+            string[] a = File.ReadLines("Input/Dec5.txt").ToArray();
+            Console.WriteLine(Dec5.CountArrayStrangeSteps(a));
         }
     }
 }
