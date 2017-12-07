@@ -49,6 +49,7 @@
     <Compile Include="Dec4_Tests.cs" />
     <Compile Include="Dec5_Tests.cs" />
     <Compile Include="Dec6_Tests.cs" />
+    <Compile Include="Dec7_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

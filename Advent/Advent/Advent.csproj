@@ -45,7 +45,9 @@
     <Compile Include="Dec3.cs" />
     <Compile Include="Dec4.cs" />
     <Compile Include="Dec5.cs" />
+    <Compile Include="Dec6.cs" />
     <Compile Include="Dec6obj.cs" />
+    <Compile Include="Dec7.cs" />
     <Compile Include="General.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,9 +13,8 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            string[] a = File.ReadLines("Input/Dec6.txt").ToArray();
-            Dec6obj today = new Dec6obj(a);
-            Console.WriteLine(today.CountLoopLength());
+            string[] a = File.ReadLines("Input/Dec7.txt").ToArray();
+            Console.WriteLine(Dec7.FindHead(a));
         }
     }
 }
