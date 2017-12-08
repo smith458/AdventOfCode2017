@@ -47,5 +47,19 @@ namespace Advent.Test
             Assert.AreEqual(veboyvy, Dec7.FindHead(a));
         } 
         */
+
+        [Test]
+        public void Test2A()
+        {
+            string[] a = new string[] { "a (1) -> b, c, d", "b (2)", "c (2)", "d (3)" };
+            Assert.AreEqual(2, Dec7.FindWrongWeight(a));
+        }
+
+        [Test]
+        public void Test2B()
+        {
+            string[] a = new string[] { "a (1) -> b, c", "b (3) -> d, e, f", "c (5)", "d (1)", "e (1)", "f (1)" };
+            Assert.AreEqual(2, Dec7.FindWrongWeight(a));
+        }
     }
 }

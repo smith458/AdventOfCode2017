@@ -29,5 +29,47 @@ namespace Advent
 
             return parSet.Except(childSet).ToArray()[0];
         }
+
+        public static int FindWrongWeight(string[] lineArr)
+        {
+            string head = FindHead(lineArr);
+            string headLine = lineArr.FirstOrDefault(x => (string) x.Take(head.Length) == head);
+
+            return 0;
+        }
+
+        public static object[] LineParser(string line)
+        {
+            string[] halves = line.Split(" -> ", StringSplitOptions.None);
+            
+        }
     }
+
+    public class TreeNode
+    {
+        string _name;
+        int _weight;
+        List<TreeNode> _children = null;
+
+
+        public TreeNode(string name, int weight, string[] data, string[] children = null)
+        {
+            _name = name;
+            _weight = weight;
+
+            if (children != null)
+            {
+                foreach (string child in children)
+                {
+                    _children.Add(CreateTreeNode(child));
+                }
+            }
+        }
+
+        internal TreeNode CreateTreeNode(string child)
+        {
+            return new TreeNode("", 1, new string[0]);
+        }
+    }
+        
 }
