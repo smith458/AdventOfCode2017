@@ -14,7 +14,8 @@ namespace Main
         static void Main(string[] args)
         {
             string[] a = File.ReadLines("Input/Dec7.txt").ToArray();
-            Console.WriteLine(Dec7.FindHead(a));
+            Console.WriteLine(a[3]);
+            Dec7.LineParser(a[3]);
         }
     }
 }

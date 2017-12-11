@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Advent
 {
@@ -38,10 +39,22 @@ namespace Advent
             return 0;
         }
 
-        public static object[] LineParser(string line)
+        public static TreeNode LineToNode(string line)
         {
-            string[] halves = line.Split(" -> ", StringSplitOptions.None);
             
+            Console.WriteLine(match.Groups[1]);
+            Console.WriteLine(match.Groups[2]);
+            Console.WriteLine(match.Groups[3]);
+
+        }
+    }
+
+    //Pass the whole line array and returns the head
+    public class TreeCreator
+    {
+        public TreeCreator()
+        {
+
         }
     }
 
@@ -66,7 +79,20 @@ namespace Advent
             }
         }
 
-        internal TreeNode CreateTreeNode(string child)
+        public TreeNode(string line)
+        {
+            Match match = Regex.Match(line, @"^([^\s]+)\s\(([\d]+)\)[\s->]*(.*)");
+
+            _name = match.Groups[1].Value;
+            _weight = int.Parse(match.Groups[2].Value);
+            string[] children = match.Groups[3].Value.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (string child in children)
+            {
+                //Stuff
+            }
+        }
+
+        internal TreeNode CreateTreeNode(string[] lines)
         {
             return new TreeNode("", 1, new string[0]);
         }
