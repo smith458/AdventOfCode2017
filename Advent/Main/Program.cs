@@ -14,8 +14,9 @@ namespace Main
         static void Main(string[] args)
         {
             string[] a = File.ReadLines("Input/Dec7.txt").ToArray();
-            Console.WriteLine(a[3]);
-            Dec7.LineParser(a[3]);
+            string head = Dec7.FindHead(a);
+            TreeCreator builder = new TreeCreator(a, head);
+            Console.WriteLine(builder.FindOffWeight());
         }
     }
 }

@@ -52,14 +52,52 @@ namespace Advent.Test
         public void Test2A()
         {
             string[] a = new string[] { "a (1) -> b, c, d", "b (2)", "c (2)", "d (3)" };
-            Assert.AreEqual(2, Dec7.FindWrongWeight(a));
+            string head = Dec7.FindHead(a);
+            TreeCreator builder = new TreeCreator(a, head);
+            Assert.AreEqual(2, builder.FindOffWeight());
         }
 
         [Test]
         public void Test2B()
         {
             string[] a = new string[] { "a (1) -> b, c", "b (3) -> d, e, f", "c (5)", "d (1)", "e (1)", "f (1)" };
-            Assert.AreEqual(2, Dec7.FindWrongWeight(a));
+            string head = Dec7.FindHead(a);
+            TreeCreator builder = new TreeCreator(a, head);
+            Assert.AreEqual(6, builder.FindOffWeight());
         }
+
+        [Test]
+        public void Test2C()
+        {
+            string[] a = new string[] {
+                "pare (1) -> ugml, padx, fwft",
+                "ugml (68) -> gyxo, ebii, jptl",
+                "padx (45) -> pbga, havc, qoyq",
+                "fwft (72) -> ktlj, cntj, xhth",
+                "gyxo (61)",
+                "ebii (61)",
+                "jptl (61)",
+                "pbga (66)",
+                "havc (66)",
+                "qoyq (66)",
+                "ktlj (57)",
+                "cntj (57)",
+                "xhth (57)"
+            };
+            string head = Dec7.FindHead(a);
+            TreeCreator builder = new TreeCreator(a, head);
+            Assert.AreEqual(60, builder.FindOffWeight());
+        }
+
+        /*
+        [Test]
+        public void Test2D()
+        {
+            string[] a = File.ReadLines("Input/Dec5.txt").ToArray();
+            string head = Dec7.FindHead(a);
+            TreeCreator builder = new TreeCreator(a, head);
+            Assert.AreEqual(17561, builder.FindOffWeight());
+        } 
+        */
     }
 }
