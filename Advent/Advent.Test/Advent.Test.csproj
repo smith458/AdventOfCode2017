@@ -51,6 +51,7 @@
     <Compile Include="Dec6_Tests.cs" />
     <Compile Include="Dec7_Tests.cs" />
     <Compile Include="Dec8_Tests.cs" />
+    <Compile Include="Dec9_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,8 +13,8 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            string[] a = File.ReadLines("Input/Dec8.txt").ToArray();
-            Console.WriteLine(Dec8.MaxDuringProcessInstructions(a));
+            string[] a = File.ReadLines("Input/Dec9.txt").ToArray();
+            Console.WriteLine(Dec9.CountCancelled(a[0]));
         }
     }
 }
