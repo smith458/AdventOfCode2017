@@ -13,10 +13,8 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            string[] a = File.ReadLines("Input/Dec7.txt").ToArray();
-            string head = Dec7.FindHead(a);
-            TreeCreator builder = new TreeCreator(a, head);
-            Console.WriteLine(builder.FindOffWeight());
+            string[] a = File.ReadLines("Input/Dec8.txt").ToArray();
+            Console.WriteLine(Dec8.MaxDuringProcessInstructions(a));
         }
     }
 }

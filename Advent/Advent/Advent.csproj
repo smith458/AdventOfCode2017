@@ -48,6 +48,7 @@
     <Compile Include="Dec6.cs" />
     <Compile Include="Dec6obj.cs" />
     <Compile Include="Dec7.cs" />
+    <Compile Include="Dec8.cs" />
     <Compile Include="General.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
