@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dec1.cs" />
+    <Compile Include="Dec10.cs" />
+    <Compile Include="Dec11.cs" />
     <Compile Include="Dec2.cs" />
     <Compile Include="Dec3.cs" />
     <Compile Include="Dec4.cs" />
