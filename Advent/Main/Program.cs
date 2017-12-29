@@ -13,9 +13,8 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            string[] a = File.ReadLines("Input/Dec11.txt").ToArray();
-            string[] b = a[0].Split(',');
-            Console.WriteLine(Dec11.CountFarthest(b));
+            string[] a = File.ReadLines("Input/Dec12.txt").ToArray();
+            Console.WriteLine(Dec12.CountGroups(a));
         }
     }
 }
