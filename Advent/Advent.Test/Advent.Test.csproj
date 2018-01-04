@@ -46,6 +46,7 @@
     <Compile Include="Dec10_Tests.cs" />
     <Compile Include="Dec11_Tests.cs" />
     <Compile Include="Dec12_Tests.cs" />
+    <Compile Include="Dec13_Test.cs" />
     <Compile Include="Dec1_Test.cs" />
     <Compile Include="Dec2_Tests.cs" />
     <Compile Include="Dec3_Tests.cs" />
