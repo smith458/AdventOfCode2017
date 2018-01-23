@@ -18,12 +18,15 @@ namespace Advent
 
             for (int x = 0; x < lineArr.Length; x++)
             {
+                //If current char is cancel, remove it and the next char and move on
                 if (lineArr[x] == '!')
                 {
                     lineArr[x] = ' ';
                     lineArr[x + 1] = ' ';
+                    continue;
                 }
 
+                // If we are not currently in junk, evaluate the character
                 if (!isJunk)
                 {
                     switch (lineArr[x])
@@ -37,10 +40,9 @@ namespace Advent
                         case '}':
                             score += level--;
                             break;
-                        default:
-                            break;
                     }
                 }
+                // If we are in junk, check for the end of junk
                 else
                 {
                     if (lineArr[x] == '>')
